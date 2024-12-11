@@ -24,6 +24,7 @@ Vamos ao código!
 
 
 
+
 A base de dados que foi utilizada nesse projeto está disponível em: https://www.kaggle.com/datasets/ashydv/advertising-dataset
 
 
