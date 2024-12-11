@@ -43,18 +43,57 @@ library(corrplot)
               ggtitle("Anúncios em TV x Impacto em Vendas/Sales") +
               labs(x = "Anúncios em TV", y = "Vendas/Sales")
 
-  #1.4 - Ao final, serão apresentadas as análise de regressão e correlação.
+  #1.4 - Ao final, serão apresentadas as análises de regressão e correlação.
               summary(regressao_tv)
 
 ```
 Ao executar esse bloco do código, vamos obter as seguintes análises:
 
-- ![image](https://github.com/user-attachments/assets/7c90116b-2c84-4363-a599-2e9504f75433)
 
+Coeficiente de correlação "r":
+-----------------------------------
+![image](https://github.com/user-attachments/assets/7c90116b-2c84-4363-a599-2e9504f75433)
+
+- O coeficiente de correlação se trata de o quanto a variável dependente está relacionada com a variável independente, neste caso, "Sales" e "TV", respectivamente. Como é apresentado, existe um coeficiente de correlação de "0.9", o que indica que existe de fato, uma forte correlação positiva entre as variáveis.
+
+Gráfico de de dispersão e linha de regressão
+----------------------------------------------------
  
  ![regressaotv](https://github.com/user-attachments/assets/c07486c5-edd6-4080-b9fb-12c9d32ea2ff)
 
- Através deste gráfico de dispersão com a linha de regressão, é possível visualizar que a variável dependente "Sales" tem uma forte correlação positiva com a variável independente "TV"
+Com este gráfico de dispersão em conjunto com uma linha de regressão, é possível visualizar os dados de forma clara e objetiva, e é possível destacar dois tópicos: 
+
+- Forte correlação positiva: Os dados indicam que, à medida que os gastos em TV aumentam, as vendas também tendem a aumentar. Isso é representado pela inclinação positiva da linha de regressão.
+
+- Linha de tendência: A linha ajustada captura bem a relação linear entre as variáveis, com poucos desvios significativos.
+
+Análises gerais:
+------------------------------------------------
+Ao final do bloco, a função "summary" irá apresentar uma análise detalhada de todas as informações presentes na regressão linear.
+
+![image](https://github.com/user-attachments/assets/8693fb94-56ff-43ef-867b-ae577b206ef4)
+
+Sendo essas informações: 
+
+Resíduos (Residuals):
+------------------------
+Vai nos mostrar o quanto o valor observado/real divergiu do valor esperado pelo modelo de regressão linear.
+
+- Valor mínimo: Foi de aproximadamente **-6,45**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 6,45 maior do que o valor real.
+
+- Mediana: O resíduo mediano é de 0,0218, um valor bem próximo de 0, o que indica que o modelo está bem equilibrado.
+
+- Valor máximo: Foi de aproximadamente **-5,70**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 5,70 menor do que o valor real.
+
+
+
+
+    
+
+
+
+
+ 
 
 
               
