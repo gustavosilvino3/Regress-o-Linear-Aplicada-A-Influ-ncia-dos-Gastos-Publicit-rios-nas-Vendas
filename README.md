@@ -77,7 +77,7 @@ Sendo essas informações:
 
 Resíduos (Residuals):
 ------------------------
-Vai nos mostrar o quanto o valor observado/real divergiu do valor esperado pelo modelo de regressão linear.
+Os resíduos vão nos mostrar o quanto o valor observado/real divergiu do valor esperado pelo modelo de regressão linear.
 
 - Valor mínimo: Foi de aproximadamente **-6,45**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 6,45 maior do que o valor real.
 
