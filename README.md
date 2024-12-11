@@ -84,7 +84,36 @@ Os resíduos vão nos mostrar o quanto o valor observado/real divergiu do valor 
 - Mediana: O resíduo mediano é de 0,0218, um valor bem próximo de 0, o que indica que o modelo está bem equilibrado.
 
 - Valor máximo: Foi de aproximadamente **-5,70**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 5,70 menor do que o valor real.
-.
+
+Coeficientes (Coefficients):
+------------------------
+Os coeficientes representam a relação entre os gastos em anúncios de TV (TV) e as vendas (Sales).
+
+**Intercepto**
+
+- **Estimativa:** O valor **6,974821** representa as vendas esperadas quando não há investimento em anúncios de TV.
+- **Erro padrão:** O erro padrão do intercepto é de **0,322553**, ou seja, uma incerteza muito pequena, e isso indica uma maior confiança e maior precisão na estimativa do intercepto.
+- **Estatística t / Valor t:** O valor t de **21,62**, indica que a estimativa do intercepto no valor de **6,974821** é **21,62** vezes maior do que o erro padrão de **0,322553**, ou seja, evidencia a alta precisão do intercepto.
+- **Significância estatística:** O p-valor (**<2e-16** ou **0,0000000000000002**) mostra que há uma evidência muito forte de que o intercepto é diferente de zero. Isso significa que, mesmo sem gastos em anúncios de TV, o modelo prevê um valor base de vendas (**6,974821 unidades**), o que é estatisticamente significativo.
+
+**TV (Variável independente)**
+
+- **Estimativa:** O valor **0,055465** diz que, para cada unidade adicional de gasto em anúncios de TV, as vendas aumentam, em média, **0,055465** unidades.
+- **Erro padrão:** Como o erro padrão de **0,001896** é de fato muito pequeno, isso é um bom indicador de que as estimativas são precisas.
+- **Estatística t / Valor t:** Como o valor **29,26** é mais elevado, a influência que a variável independente tem sobre a variável dependente é estatisticamente significativa.
+- **P-valor:** Apresenta um valor muito pequeno, **<2e-16** ou **0,0000000000000002**, confirmando que os gastos em TV têm um impacto altamente significativo sobre as vendas.
+
+Níveis de significância estatística:
+------------------------------------
+![image](https://github.com/user-attachments/assets/9fe0b697-36d8-445f-836e-db4ba4929814)
+
+Os asteriscos (***) indicam níveis de significância estatística.
+
+- "***": (p<0,001), logo, é extremamente significativo estatisticamente.
+- "**": (p<0,01), logo, é muito significativo estatisticamente.
+- "*": (p<0,05), logo, é significativo estatisticamente.
+- Sem asterisco: Não é significativo estatisticamente.
+
 
 
 
