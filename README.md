@@ -2,9 +2,17 @@
 
 Este projeto explora a aplicação da regressão linear para analisar o impacto de gastos publicitários em diferentes mídias (TV, rádio e jornal) sobre as vendas de um produto.
 
-Mas o que seria regressão linear? De forma simples, a regressão linear é uma ferramenta usada para entender e prever como uma coisa afeta outra. Neste caso por exemplo, você pode descobrir se aumentar os gastos com anúncios aumenta as vendas. 
+Mas o que seria "regressão linear"? 
+--------------------------------------------
+- De forma simples, a regressão linear é uma ferramenta usada para entender e prever como uma coisa afeta outra. Neste caso por exemplo, você pode descobrir se aumentar os gastos com anúncios aumenta as vendas.
 
-Vamos ao código! 
+Ferramentas utilizadas para a criação do projeto.
+--------------------------------------------------
+- Base de dados utilizada disponível em: https://www.kaggle.com/datasets/ashydv/advertising-dataset/data
+- Código desenvolvido por meio de linguagem R.
+- IDE utilizada: RStudio.
+
+Desenvolvimento por partes do código! 
 -----------------------------------------------------------------
 ```r
 
@@ -20,7 +28,6 @@ library(corrplot)
 
 # 1. Regressão Linear e Correlação entre a variável independente "TV" e a variável dependente "Sales"
    
-  
   # 1.1 - Criação da variável que irá calcular a regressão linear.
               regressao_tv <- lm(Sales ~ TV, data = dados)
       
@@ -40,6 +47,15 @@ library(corrplot)
               summary(regressao_tv)
 
 ```
+Ao executar esse bloco do código, vamos obter as seguintes análises:
+
+- ![image](https://github.com/user-attachments/assets/7c90116b-2c84-4363-a599-2e9504f75433)
+
+ 
+ ![regressaotv](https://github.com/user-attachments/assets/c07486c5-edd6-4080-b9fb-12c9d32ea2ff)
+
+ Através deste gráfico de dispersão com a linha de regressão, é possível visualizar que a variável dependente "Sales" tem uma forte correlação positiva com a variável independente "TV"
+
 
               
               
@@ -53,7 +69,6 @@ library(corrplot)
 
 
 
-A base de dados que foi utilizada nesse projeto está disponível em: https://www.kaggle.com/datasets/ashydv/advertising-dataset
 
 
 
