@@ -84,7 +84,7 @@ Os resíduos vão nos mostrar o quanto o valor observado/real divergiu do valor 
 - Mediana: O resíduo mediano é de 0,0218, um valor bem próximo de 0, o que indica que o modelo está bem equilibrado.
 
 - Valor máximo: Foi de aproximadamente **-5,70**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 5,70 menor do que o valor real.
-
+.
 
 
 
