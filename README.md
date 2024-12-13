@@ -12,7 +12,7 @@ Ferramentas utilizadas para a criação do projeto.
 - Código desenvolvido por meio de linguagem R.
 - IDE utilizada: RStudio.
 
-Desenvolvimento por partes do código! 
+Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "TV".
 -----------------------------------------------------------------
 ```r
 
@@ -30,19 +30,19 @@ library(corrplot)
    
   # 1.1 - Criação da variável que irá calcular a regressão linear.
               regressao_tv <- lm(Sales ~ TV, data = dados)
-      
-  # 1.2 - Calcular a correlação entre as variáveis "TV" e "Sales".
-              cor_tv <- cor(dados$Sales, dados$TV)
-              print(paste("Correlação entre Anúncios em TV e Impactos em Vendas/Sales:", round(cor_tv, 2)))
-      
-  # 1.3 - Criação do gráfico de dispersão com a linha de regressão.
+
+  # 1.2 - Criação do gráfico de dispersão com a linha de regressão.
               ggplot(data = dados, mapping = aes(x = TV, y = Sales)) +
               geom_point() +
               geom_smooth(method = lm, col = "red") +
               theme_classic() +
               ggtitle("Anúncios em TV x Impacto em Vendas/Sales") +
               labs(x = "Anúncios em TV", y = "Vendas/Sales")
-
+      
+  # 1.3 - Calcular a correlação entre as variáveis "TV" e "Sales".
+              cor_tv <- cor(dados$Sales, dados$TV)
+              print(paste("Correlação entre Anúncios em TV e Impactos em Vendas/Sales:", round(cor_tv, 2)))
+      
   #1.4 - Ao final, serão apresentadas as análises de regressão e correlação.
               summary(regressao_tv)
 
@@ -113,6 +113,38 @@ Os asteriscos (***) indicam níveis de significância estatística.
 - "**": (p<0,01), logo, é muito significativo estatisticamente.
 - "*": (p<0,05), logo, é significativo estatisticamente.
 - Sem asterisco: Não é significativo estatisticamente.
+
+Erro padrão Residual (Residual Standard Error):
+---------------------------------------
+- O erro padrão residual tem a função de medir o quanto a variação média prevista das incertezas do modelo estão distantes da variação real.
+- Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **2.296 unidades**.
+
+
+Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "Rádio".
+  -----------------------------
+  ```r
+  
+  # 2. Regressão Linear e Correlação entre a variável dependente "Sales" e a variável independente "Rádio" 
+
+              
+  # 2.1 - Criação da variável que irá calcular a regressão linear.
+              regressao_radio <- lm(Sales ~ Radio, data = dados)
+              
+  # 2.2 - Criação do gráfico de dispersão com a linha de regressão.
+              ggplot(data = dados, mapping = aes(x = Radio, y = Sales)) +
+              geom_point() +
+              geom_smooth(method = lm, col = "red") +
+              theme_classic() +
+              ggtitle("Anúncios em Radio x Impacto em Vendas/Sales") +
+              labs(x = "Anúncios em Radio", y = "Vendas/Sales")            
+              
+  # 2.3 - Calcular a correlação entre as variáveis "Radio" e "Sales".
+              cor_radio <- cor(dados$Sales, dados$Radio)
+              print(paste("Correlação entre Anúncios em Radio e Impactos em Vendas/Sales:", round(cor_radio, 2)))
+
+  # 2.4 - Ao final, serão apresentadas as análise de regressão e correlação.
+              summary(regressao_radio)
+  ```
 
 
 
