@@ -1,6 +1,6 @@
 # Regressão Linear Aplicada: A influência dos gastos publicitários nas vendas.
 
-Este projeto explora a aplicação da regressão linear para analisar o impacto de gastos publicitários em diferentes mídias (TV, rádio e jornal) sobre as vendas de um produto.
+- **Objetivo do projeto:** Explorar a aplicação da regressão linear para analisar o impacto de gastos publicitários em diferentes mídias (TV, rádio e jornal) sobre as vendas de um produto.
 
 Mas o que seria "regressão linear"? 
 --------------------------------------------
@@ -50,12 +50,6 @@ library(corrplot)
 Ao executar esse bloco do código, vamos obter as seguintes análises:
 
 
-Coeficiente de correlação "r":
------------------------------------
-![image](https://github.com/user-attachments/assets/7c90116b-2c84-4363-a599-2e9504f75433)
-
-- O coeficiente de correlação se trata de o quanto a variável dependente está relacionada com a variável independente, neste caso, "Sales" e "TV", respectivamente. Como é apresentado, existe um coeficiente de correlação de "0.9", o que indica que existe de fato, uma forte correlação positiva entre as variáveis.
-
 Gráfico de de dispersão e linha de regressão
 ----------------------------------------------------
  
@@ -66,6 +60,13 @@ Com este gráfico de dispersão em conjunto com uma linha de regressão, é poss
 - Forte correlação positiva: Os dados indicam que, à medida que os gastos em TV aumentam, as vendas também tendem a aumentar. Isso é representado pela inclinação positiva da linha de regressão.
 
 - Linha de tendência: A linha ajustada captura bem a relação linear entre as variáveis, com poucos desvios significativos.
+
+
+Coeficiente de correlação "r":
+-----------------------------------
+![image](https://github.com/user-attachments/assets/7c90116b-2c84-4363-a599-2e9504f75433)
+
+- O coeficiente de correlação se trata de o quanto a variável dependente está relacionada com a variável independente, neste caso, "Sales" e "TV", respectivamente. Como é apresentado, existe um coeficiente de correlação de "0.9", o que indica que existe de fato, uma forte correlação positiva entre as variáveis.
 
 Análises gerais:
 ------------------------------------------------
@@ -119,6 +120,14 @@ Erro padrão Residual (Residual Standard Error):
 - O erro padrão residual tem a função de medir o quanto a variação média prevista das incertezas do modelo estão distantes da variação real.
 - Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **2.296 unidades**.
 
+Coeficiente de determinação (R²):
+---------------------------------------
+- Diz sobre o quanto do comportamento da variável dependente (Sales), pode ser explicado pela variável independente (TV) no modelo de regressão.
+- Dessa forma, o R² equivalente a **0,8122**, significa que 81,22% da variação nas vendas podem ser explicadas pelos investimentos em anúncios de TV.
+
+
+
+
 
 Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "Rádio".
   -----------------------------
@@ -135,16 +144,23 @@ Desenvolvimento por partes do código: Variável dependente "Sales" x Variável 
               geom_point() +
               geom_smooth(method = lm, col = "red") +
               theme_classic() +
-              ggtitle("Anúncios em Radio x Impacto em Vendas/Sales") +
-              labs(x = "Anúncios em Radio", y = "Vendas/Sales")            
+              ggtitle("Anúncios em Rádio x Impacto em Vendas/Sales") +
+              labs(x = "Anúncios em Rádio", y = "Vendas/Sales")            
               
   # 2.3 - Calcular a correlação entre as variáveis "Radio" e "Sales".
               cor_radio <- cor(dados$Sales, dados$Radio)
-              print(paste("Correlação entre Anúncios em Radio e Impactos em Vendas/Sales:", round(cor_radio, 2)))
+              print(paste("Correlação entre Anúncios em Rádio e Impactos em Vendas/Sales:", round(cor_radio, 2)))
 
   # 2.4 - Ao final, serão apresentadas as análise de regressão e correlação.
               summary(regressao_radio)
   ```
+
+Na continuação do código, iremos analisar a relação entre a variável dependente "Sales" e a variável independente "Radio"
+
+
+Gráfico de de dispersão e linha de regressão
+----------------------------------------------------
+ 
 
 
 
