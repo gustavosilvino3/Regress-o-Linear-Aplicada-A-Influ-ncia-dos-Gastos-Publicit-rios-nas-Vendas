@@ -1,19 +1,21 @@
 # Regressão Linear Aplicada: A influência dos gastos publicitários nas vendas.
 
-- **Objetivo do projeto:** Explorar a aplicação da regressão linear para analisar o impacto de gastos publicitários em diferentes mídias (TV, rádio e jornal) sobre as vendas de um produto.
+## 1. Introdução
 
-Mas o que seria "regressão linear"? 
---------------------------------------------
-- De forma simples, a regressão linear é uma ferramenta usada para entender e prever como uma coisa afeta outra. Neste caso por exemplo, você pode descobrir se aumentar os gastos com anúncios aumenta as vendas.
+**Objetivo do projeto:** 
+Explorar a aplicação da regressão linear para analisar como o investimento em anúncios publicitários em diferentes meios de comunicação, pode ou não, estimular as vendas de determinado produto.
 
-Ferramentas utilizadas para a criação do projeto.
---------------------------------------------------
+- Mas o que seria "regressão linear"? A regressão linear é uma técnica estatística utilizada para entender e modelar a relação entre variáveis. Ela permite prever o valor de uma variável dependente com base em uma ou mais variáveis independentes, ajustando uma linha reta aos dados para identificar tendências e padrões.
+
+
+## 2. Ferramentas utilizadas para a criação do projeto.
+
 - Base de dados utilizada disponível em: https://www.kaggle.com/datasets/ashydv/advertising-dataset/data
 - Código desenvolvido por meio de linguagem R.
 - IDE utilizada: RStudio.
 
-Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "TV".
------------------------------------------------------------------
+## 3. Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "TV".
+
 ```r
 
 #O arquivo "advertising.csv" é carregado para a variável "dados", contendo informações sobre os gastos
@@ -50,10 +52,11 @@ library(corrplot)
 Ao executar esse bloco do código, vamos obter as seguintes análises:
 
 
-Gráfico de de dispersão e linha de regressão
-----------------------------------------------------
+ **3.1   Gráfico de de dispersão e linha de regressão:**
+
  
- ![regressaotv](https://github.com/user-attachments/assets/c07486c5-edd6-4080-b9fb-12c9d32ea2ff)
+ ![image](https://github.com/user-attachments/assets/5d2f49f2-f7b2-47ef-a40f-aa00574bf382)
+
 
 Com este gráfico de dispersão em conjunto com uma linha de regressão, é possível visualizar os dados de forma clara e objetiva, e é possível destacar dois tópicos: 
 
@@ -62,22 +65,22 @@ Com este gráfico de dispersão em conjunto com uma linha de regressão, é poss
 - Linha de tendência: A linha ajustada captura bem a relação linear entre as variáveis, com poucos desvios significativos.
 
 
-Coeficiente de correlação "r":
------------------------------------
+**3.2  Coeficiente de correlação "r":**
+
 ![image](https://github.com/user-attachments/assets/7c90116b-2c84-4363-a599-2e9504f75433)
 
-- O coeficiente de correlação se trata de o quanto a variável dependente está relacionada com a variável independente, neste caso, "Sales" e "TV", respectivamente. Como é apresentado, existe um coeficiente de correlação de "0.9", o que indica que existe de fato, uma forte correlação positiva entre as variáveis.
+- O coeficiente de correlação se trata de o quanto a variável dependente está relacionada com a variável independente, neste caso, "Sales" e "TV", respectivamente. Como é apresentado, existe um coeficiente de correlação de **"0,90"**, o que indica que existe de fato, uma forte correlação positiva entre as variáveis.
 
-Análises gerais:
-------------------------------------------------
+**3.3  Análises gerais:**
+
 Ao final do bloco, a função "summary" irá apresentar uma análise detalhada de todas as informações presentes na regressão linear.
 
 ![image](https://github.com/user-attachments/assets/8693fb94-56ff-43ef-867b-ae577b206ef4)
 
 Sendo essas informações: 
 
-Resíduos (Residuals):
-------------------------
+**3.3.1  Resíduos (Residuals):**
+
 Os resíduos vão nos mostrar o quanto o valor observado/real divergiu do valor esperado pelo modelo de regressão linear.
 
 - Valor mínimo: Foi de aproximadamente **-6,45**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 6,45 maior do que o valor real.
@@ -86,26 +89,26 @@ Os resíduos vão nos mostrar o quanto o valor observado/real divergiu do valor 
 
 - Valor máximo: Foi de aproximadamente **-5,70**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 5,70 menor do que o valor real.
 
-Coeficientes (Coefficients):
-------------------------
+**3.3.2  Coeficientes (Coefficients):**
+
 Os coeficientes representam a relação entre os gastos em anúncios de TV (TV) e as vendas (Sales).
 
-**Intercepto**
-
+***Intercepto***
+   
 - **Estimativa:** O valor **6,974821** representa as vendas esperadas quando não há investimento em anúncios de TV.
 - **Erro padrão:** O erro padrão do intercepto é de **0,322553**, ou seja, uma incerteza muito pequena, e isso indica uma maior confiança e maior precisão na estimativa do intercepto.
 - **Estatística t / Valor t:** O valor t de **21,62**, indica que a estimativa do intercepto no valor de **6,974821** é **21,62** vezes maior do que o erro padrão de **0,322553**, ou seja, evidencia a alta precisão do intercepto.
 - **Significância estatística:** O p-valor (**<2e-16** ou **0,0000000000000002**) mostra que há uma evidência muito forte de que o intercepto é diferente de zero. Isso significa que, mesmo sem gastos em anúncios de TV, o modelo prevê um valor base de vendas (**6,974821 unidades**), o que é estatisticamente significativo.
 
-**TV (Variável independente)**
+***TV (Variável independente)***
 
 - **Estimativa:** O valor **0,055465** diz que, para cada unidade adicional de gasto em anúncios de TV, as vendas aumentam, em média, **0,055465** unidades.
 - **Erro padrão:** Como o erro padrão de **0,001896** é de fato muito pequeno, isso é um bom indicador de que as estimativas são precisas.
 - **Estatística t / Valor t:** Como o valor **29,26** é mais elevado, a influência que a variável independente tem sobre a variável dependente é estatisticamente significativa.
 - **P-valor:** Apresenta um valor muito pequeno, **<2e-16** ou **0,0000000000000002**, confirmando que os gastos em TV têm um impacto altamente significativo sobre as vendas.
 
-Níveis de significância estatística:
-------------------------------------
+**3.3.3  Níveis de significância estatística:**
+
 ![image](https://github.com/user-attachments/assets/9fe0b697-36d8-445f-836e-db4ba4929814)
 
 Os asteriscos (***) indicam níveis de significância estatística.
@@ -115,22 +118,18 @@ Os asteriscos (***) indicam níveis de significância estatística.
 - "*": (p<0,05), logo, é significativo estatisticamente.
 - Sem asterisco: Não é significativo estatisticamente.
 
-Erro padrão Residual (Residual Standard Error):
----------------------------------------
+**3.3.4 Erro padrão Residual (Residual Standard Error):**
+
 - O erro padrão residual tem a função de medir o quanto a variação média prevista das incertezas do modelo estão distantes da variação real.
 - Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **2.296 unidades**.
 
-Coeficiente de determinação (R²):
----------------------------------------
+**3.3.5 Coeficiente de determinação (R²):**
+
 - Diz sobre o quanto do comportamento da variável dependente (Sales), pode ser explicado pela variável independente (TV) no modelo de regressão.
 - Dessa forma, o R² equivalente a **0,8122**, significa que 81,22% da variação nas vendas podem ser explicadas pelos investimentos em anúncios de TV.
 
-
-
-
-
-Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "Rádio".
-  -----------------------------
+## 4. Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "Rádio".
+  
   ```r
   
   # 2. Regressão Linear e Correlação entre a variável dependente "Sales" e a variável independente "Rádio" 
@@ -158,8 +157,22 @@ Desenvolvimento por partes do código: Variável dependente "Sales" x Variável 
 Na continuação do código, iremos analisar a relação entre a variável dependente "Sales" e a variável independente "Radio"
 
 
-Gráfico de de dispersão e linha de regressão
-----------------------------------------------------
+**4.1 Gráfico de de dispersão e linha de regressão**
+
+![image](https://github.com/user-attachments/assets/b65a9b77-d8ab-4b4a-901e-5a9483748418)
+
+Através deste gráfico, é possível perceber que a correlação entre as variavéis, apesar de ser positiva, não é forte como a anterior, devido aos seguintes fatores: 
+
+- Distribuição dos pontos: Existe uma maior dispersão dos pontos, isso pode sugerir que os anúncios em rádio, não possuam alta influência na variável das vendas.
+
+- Linha de têndencia: Como os pontos não estão tão próximos da linha de regressão, o modelo tem uma capacidade moderada de explicar a variação nas vendas.
+
+**4.2 Coeficiente de correlação "r":**
+
+![image](https://github.com/user-attachments/assets/14dfcddb-0a7c-4d59-8804-77107aa15dd3)
+
+- O coeficiente de correlação entre a variável dependente "Sales" e a variável independente "Rádio" é de **"0,35"**, que representa uma correlação de fraca a moderada.
+
  
 
 
@@ -172,7 +185,8 @@ Gráfico de de dispersão e linha de regressão
 
  
 
-
+## 5.0
+![image](https://github.com/user-attachments/assets/043cbc4b-7f0f-4966-953c-9f1e237e50b2)
               
               
 
