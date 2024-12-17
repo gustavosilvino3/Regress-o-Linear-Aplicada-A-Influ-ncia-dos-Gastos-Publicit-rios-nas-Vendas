@@ -205,7 +205,7 @@ Os coeficientes representam a relação entre os gastos em anúncios de Rádio e
 ***Rádio (Variável independente)***
 
 - **Estimativa:** O valor **0.1244** representa a idéia de que, para cada unidade adicional de gasto em anúncios de Rádio, as vendas aumentam, em média, **0.1244** unidades.
-- **Erro padrão:** O erro padrão desta variável é de **0.0237**, 
+- **Erro padrão:** O erro padrão da variável Radio é de **0.0237**, um valor aproximadamente 12,5 vezes maior de incerteza, o que indica uma confiabilidade menor.
 - **Estatística t / Valor t:** Como o valor **29,26** é mais elevado, a influência que a variável independente tem sobre a variável dependente é estatisticamente significativa.
 - **P-valor:** Apresenta um valor muito pequeno, **<2e-16** ou **0,0000000000000002**, confirmando que os gastos em TV têm um impacto altamente significativo sobre as vendas.
 
