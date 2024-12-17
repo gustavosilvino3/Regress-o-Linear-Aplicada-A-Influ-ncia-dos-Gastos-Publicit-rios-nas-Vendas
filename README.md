@@ -167,7 +167,7 @@ Na continuação do código, iremos analisar a relação entre a variável depen
 
 Através deste gráfico, é possível perceber que a correlação entre as variavéis, apesar de ser positiva, não é forte como a anterior, devido aos seguintes fatores: 
 
-- Distribuição dos pontos: Existe uma maior dispersão dos pontos, isso pode sugerir que os anúncios em rádio, não possuam alta influência na variável das vendas.
+- Distribuição dos pontos: Existe uma maior dispersão dos pontos, isso pode sugerir que os anúncios em rádio, não possuem alta influência na variável das vendas.
 
 - Linha de têndencia: Como os pontos não estão tão próximos da linha de regressão, o modelo tem uma capacidade moderada de explicar a variação nas vendas.
 
@@ -186,26 +186,26 @@ Assim como anteriormente, vamos fazer uma análise geral das informações obtid
 **4.3.1  Resíduos (Residuals):**
 
 - Valor mínimo: Foi de aproximadamente **-15,57**. Em determinado momento, o modelo esperou um valor cerca de 15,57 vezes maior do que o valor que foi calculado de fato. 
-
+- 1º Quartil: 25% dos erros são menores que -3.5293 unidades.
 - Resíduo mediano: Continua pequeno, mas quando comparado com o anterior (Resíduo mediano Sales x TV), é nítido o aumento de tamanho, o que indica que o modelo está ligeiramente descentralizado, neste caso.
-
+- 3º Quartil: 75% dos erros são menores que 4.2504 unidades.
 - Valor máximo: O valor obtido foi cerca de **8,68**, ou seja, em algum ponto do conjunto de dados, o modelo previa um valor de aproximadamente 8,68 vezes menor do que o valor real.
 
-**3.3.2  Coeficientes (Coefficients):**
+**4.3.2  Coeficientes (Coefficients):**
 
 Os coeficientes representam a relação entre os gastos em anúncios de Rádio e as vendas.
 
 ***Intercepto***
    
 - **Estimativa:** O valor previsto de vendas quando o investimento em anúncios de rádio são nulos, é de **12,2357**.
-- **Erro padrão:** O erro padrão do intercepto é de **0,6535**, ou seja, uma incerteza muito pequena, e isso indica uma maior confiança e maior precisão na estimativa do intercepto.
-- **Estatística t / Valor t:** O valor t de **21,62**, indica que a estimativa do intercepto no valor de **6,974821** é **21,62** vezes maior do que o erro padrão de **0,322553**, ou seja, evidencia a alta precisão do intercepto.
-- **Significância estatística:** O p-valor (**<2e-16** ou **0,0000000000000002**) mostra que há uma evidência muito forte de que o intercepto é diferente de zero. Isso significa que, mesmo sem gastos em anúncios de TV, o modelo prevê um valor base de vendas (**6,974821 unidades**), o que é estatisticamente significativo.
+- **Erro padrão:** O erro padrão do intercepto é de **0,6535**, que representa uma incerteza muito baixa, o que sugere que a estimativa é precisa e confiável.
+- **Estatística t / Valor t:** O valor t de **18.724**, indica que a estimativa do intercepto no valor de **12,2357** é **18,724** vezes maior do que o erro padrão de **0,6535**, o que pode destacar uma alta confiabilidade do intercepto.
+- **Significância estatística:** O p-valor (**<2e-16** ou **0,0000000000000002**) mostra que há uma evidência muito forte de que o intercepto é diferente de zero. Isso significa que, mesmo sem gastos em anúncios de Rádio, o modelo prevê um valor base de vendas (**12,2357 unidades**), o que é estatisticamente significativo.
 
-***TV (Variável independente)***
+***Rádio (Variável independente)***
 
-- **Estimativa:** O valor **0,055465** diz que, para cada unidade adicional de gasto em anúncios de TV, as vendas aumentam, em média, **0,055465** unidades.
-- **Erro padrão:** Como o erro padrão de **0,001896** é de fato muito pequeno, isso é um bom indicador de que as estimativas são precisas.
+- **Estimativa:** O valor **0.1244** representa a idéia de que, para cada unidade adicional de gasto em anúncios de Rádio, as vendas aumentam, em média, **0.1244** unidades.
+- **Erro padrão:** O erro padrão desta variável é de **0.0237**, 
 - **Estatística t / Valor t:** Como o valor **29,26** é mais elevado, a influência que a variável independente tem sobre a variável dependente é estatisticamente significativa.
 - **P-valor:** Apresenta um valor muito pequeno, **<2e-16** ou **0,0000000000000002**, confirmando que os gastos em TV têm um impacto altamente significativo sobre as vendas.
 
