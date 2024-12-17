@@ -1,6 +1,6 @@
 # Regressão Linear Aplicada: A influência dos gastos publicitários nas vendas.
 
-## 1. Introdução
+## 1. Introdução  
 
 **Objetivo do projeto:** 
 Explorar a aplicação da regressão linear para analisar como o investimento em anúncios publicitários em diferentes meios de comunicação, pode ou não, estimular as vendas de determinado produto.
@@ -87,7 +87,7 @@ Os resíduos vão nos mostrar o quanto o valor observado/real divergiu do valor 
 
 - Mediana: O resíduo mediano é de 0,0218, um valor bem próximo de 0, o que indica que o modelo está bem equilibrado.
 
-- Valor máximo: Foi de aproximadamente **-5,70**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 5,70 menor do que o valor real.
+- Valor máximo: Foi de aproximadamente **5,70**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 5,70 menor do que o valor real.
 
 **3.3.2  Coeficientes (Coefficients):**
 
@@ -127,6 +127,10 @@ Os asteriscos (***) indicam níveis de significância estatística.
 
 - Diz sobre o quanto do comportamento da variável dependente (Sales), pode ser explicado pela variável independente (TV) no modelo de regressão.
 - Dessa forma, o R² equivalente a **0,8122**, significa que 81,22% da variação nas vendas podem ser explicadas pelos investimentos em anúncios de TV.
+
+**3.4 Conclusão obtida pelo modelo de regressão linear (Sales x TV):**
+
+
 
 ## 4. Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "Rádio".
   
@@ -172,6 +176,62 @@ Através deste gráfico, é possível perceber que a correlação entre as varia
 ![image](https://github.com/user-attachments/assets/14dfcddb-0a7c-4d59-8804-77107aa15dd3)
 
 - O coeficiente de correlação entre a variável dependente "Sales" e a variável independente "Rádio" é de **"0,35"**, que representa uma correlação de fraca a moderada.
+
+**4.3 Análise exploratória das estátisticas gerais:**
+
+![image](https://github.com/user-attachments/assets/1c231095-f4e0-4b61-8100-53eba8ee01a5)
+
+Assim como anteriormente, vamos fazer uma análise geral das informações obtidas por meio desta regressão linear
+
+**4.3.1  Resíduos (Residuals):**
+
+- Valor mínimo: Foi de aproximadamente **-15,57**. Em determinado momento, o modelo esperou um valor cerca de 15,57 vezes maior do que o valor que foi calculado de fato. 
+
+- Resíduo mediano: Continua pequeno, mas quando comparado com o anterior (Resíduo mediano Sales x TV), é nítido o aumento de tamanho, o que indica que o modelo está ligeiramente descentralizado, neste caso.
+
+- Valor máximo: O valor obtido foi cerca de **8,68**, ou seja, em algum ponto do conjunto de dados, o modelo previa um valor de aproximadamente 8,68 vezes menor do que o valor real.
+
+**3.3.2  Coeficientes (Coefficients):**
+
+Os coeficientes representam a relação entre os gastos em anúncios de Rádio e as vendas.
+
+***Intercepto***
+   
+- **Estimativa:** O valor previsto de vendas quando o investimento em anúncios de rádio são nulos, é de **12,2357**.
+- **Erro padrão:** O erro padrão do intercepto é de **0,6535**, ou seja, uma incerteza muito pequena, e isso indica uma maior confiança e maior precisão na estimativa do intercepto.
+- **Estatística t / Valor t:** O valor t de **21,62**, indica que a estimativa do intercepto no valor de **6,974821** é **21,62** vezes maior do que o erro padrão de **0,322553**, ou seja, evidencia a alta precisão do intercepto.
+- **Significância estatística:** O p-valor (**<2e-16** ou **0,0000000000000002**) mostra que há uma evidência muito forte de que o intercepto é diferente de zero. Isso significa que, mesmo sem gastos em anúncios de TV, o modelo prevê um valor base de vendas (**6,974821 unidades**), o que é estatisticamente significativo.
+
+***TV (Variável independente)***
+
+- **Estimativa:** O valor **0,055465** diz que, para cada unidade adicional de gasto em anúncios de TV, as vendas aumentam, em média, **0,055465** unidades.
+- **Erro padrão:** Como o erro padrão de **0,001896** é de fato muito pequeno, isso é um bom indicador de que as estimativas são precisas.
+- **Estatística t / Valor t:** Como o valor **29,26** é mais elevado, a influência que a variável independente tem sobre a variável dependente é estatisticamente significativa.
+- **P-valor:** Apresenta um valor muito pequeno, **<2e-16** ou **0,0000000000000002**, confirmando que os gastos em TV têm um impacto altamente significativo sobre as vendas.
+
+**3.3.3  Níveis de significância estatística:**
+
+![image](https://github.com/user-attachments/assets/9fe0b697-36d8-445f-836e-db4ba4929814)
+
+Os asteriscos (***) indicam níveis de significância estatística.
+
+- "***": (p<0,001), logo, é extremamente significativo estatisticamente.
+- "**": (p<0,01), logo, é muito significativo estatisticamente.
+- "*": (p<0,05), logo, é significativo estatisticamente.
+- Sem asterisco: Não é significativo estatisticamente.
+
+**3.3.4 Erro padrão Residual (Residual Standard Error):**
+
+- O erro padrão residual tem a função de medir o quanto a variação média prevista das incertezas do modelo estão distantes da variação real.
+- Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **2.296 unidades**.
+
+**3.3.5 Coeficiente de determinação (R²):**
+
+- Diz sobre o quanto do comportamento da variável dependente (Sales), pode ser explicado pela variável independente (TV) no modelo de regressão.
+- Dessa forma, o R² equivalente a **0,8122**, significa que 81,22% da variação nas vendas podem ser explicadas pelos investimentos em anúncios de TV.
+
+
+
 
  
 
