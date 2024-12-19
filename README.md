@@ -206,29 +206,21 @@ Os coeficientes representam a relação entre os gastos em anúncios de Rádio e
 
 - **Estimativa:** O valor **0.1244** representa a idéia de que, para cada unidade adicional de gasto em anúncios de Rádio, as vendas aumentam, em média, **0.1244** unidades.
 - **Erro padrão:** O erro padrão da variável Radio é de **0.0237**, um valor aproximadamente 12,5 vezes maior de incerteza, o que indica uma confiabilidade menor.
-- **Estatística t / Valor t:** Como o valor **29,26** é mais elevado, a influência que a variável independente tem sobre a variável dependente é estatisticamente significativa.
-- **P-valor:** Apresenta um valor muito pequeno, **<2e-16** ou **0,0000000000000002**, confirmando que os gastos em TV têm um impacto altamente significativo sobre as vendas.
+- **Estatística t / Valor t:** Se encontra em **5.251**, por mais que em comparação com a variável anterior, seu tamanho tenha diminuído, o Valor T ainda permanece longe de zero, o que significa que a variável independente tem influência sobre a variável dependente e é estatisticamente significativa.
+- **P-valor:** Apresenta o valor de, **3.88e-07** ou **0,000000388** que é consideravelmente pequeno, embora seja bem maior do que o P-valor da "variável **TV**" confirmando que os gastos em Rádio têm um impacto altamente significativo sobre as vendas do determinado produto.
 
-**3.3.3  Níveis de significância estatística:**
 
-![image](https://github.com/user-attachments/assets/9fe0b697-36d8-445f-836e-db4ba4929814)
-
-Os asteriscos (***) indicam níveis de significância estatística.
-
-- "***": (p<0,001), logo, é extremamente significativo estatisticamente.
-- "**": (p<0,01), logo, é muito significativo estatisticamente.
-- "*": (p<0,05), logo, é significativo estatisticamente.
-- Sem asterisco: Não é significativo estatisticamente.
-
-**3.3.4 Erro padrão Residual (Residual Standard Error):**
+**4.3.3 Erro padrão Residual (Residual Standard Error):**
 
 - O erro padrão residual tem a função de medir o quanto a variação média prevista das incertezas do modelo estão distantes da variação real.
-- Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **2.296 unidades**.
+- Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **4,963 unidades**, com 198 graus de liberdade.
 
-**3.3.5 Coeficiente de determinação (R²):**
+**4.3.4 Coeficiente de determinação (R²):**
 
-- Diz sobre o quanto do comportamento da variável dependente (Sales), pode ser explicado pela variável independente (TV) no modelo de regressão.
-- Dessa forma, o R² equivalente a **0,8122**, significa que 81,22% da variação nas vendas podem ser explicadas pelos investimentos em anúncios de TV.
+- Diz sobre o quanto do comportamento da variável dependente (Sales), pode ser explicado pela variável independente (Rádio) no modelo de regressão.
+- Nesta análise, o R² tem o valor de **0.1222**, isso é, 12,22% da variação nas vendas podem ser explicadas pelos investimentos em anúncios de TV.
+
+**4.4 Conclusão:**
 
 
 
