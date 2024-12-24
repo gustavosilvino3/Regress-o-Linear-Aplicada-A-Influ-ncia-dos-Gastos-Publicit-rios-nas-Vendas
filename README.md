@@ -14,12 +14,12 @@ Explorar a aplicação da regressão linear para analisar como o investimento em
 - Código desenvolvido por meio de linguagem R.
 - IDE utilizada: RStudio.
 
-## 3. Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "TV".
+## 3. Desenvolvimento por partes do código: Importar bibliotecas
 
 ```r
+#O arquivo "advertising.csv" é carregado para a variável "dados", contendo informações sobre os 
+#gastos com anúncios em diferentes meios de comunicação (TV, Radio, e Jornais/Newspaper), e informações acerca das vendas (Sales).
 
-#O arquivo "advertising.csv" é carregado para a variável "dados", contendo informações sobre os gastos
-#com anúncios em diferentes meios de comunicação (TV, Radio, e Jornais/Newspaper), e como isso é diretamente relacionado com as Vendas (Sales).
 dados <- read.csv("advertising.csv")
 
 #A biblioteca "ggplot2" irá permitir a criação de gráficos personalizados para a análise.
@@ -28,31 +28,40 @@ library(ggplot2)
 #A biblioteca "corrplot" irá permitir que o "Coeficiente de Correlação" das variáveis, sejam calculados. 
 library(corrplot)
 
+```
+
+## 4. Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "TV".
+
+```r
+
 # 1. Regressão Linear e Correlação entre a variável independente "TV" e a variável dependente "Sales"
    
+  
   # 1.1 - Criação da variável que irá calcular a regressão linear.
               regressao_tv <- lm(Sales ~ TV, data = dados)
-
+  
   # 1.2 - Criação do gráfico de dispersão com a linha de regressão.
               ggplot(data = dados, mapping = aes(x = TV, y = Sales)) +
               geom_point() +
               geom_smooth(method = lm, col = "red") +
               theme_classic() +
               ggtitle("Anúncios em TV x Impacto em Vendas/Sales") +
-              labs(x = "Anúncios em TV", y = "Vendas/Sales")
-      
+              labs(x = "Anúncios em TV", y = "Vendas/Sales")                
+  
   # 1.3 - Calcular a correlação entre as variáveis "TV" e "Sales".
               cor_tv <- cor(dados$Sales, dados$TV)
               print(paste("Correlação entre Anúncios em TV e Impactos em Vendas/Sales:", round(cor_tv, 2)))
-      
-  #1.4 - Ao final, serão apresentadas as análises de regressão e correlação.
+
+
+
+  # 1.4 - Ao final, serão apresentadas as análise de regressão e correlação.
               summary(regressao_tv)
 
 ```
 Ao executar esse bloco do código, vamos obter as seguintes análises:
 
 
- **3.1   Gráfico de de dispersão e linha de regressão:**
+**4.1   Gráfico de de dispersão e linha de regressão:**
 
  
  ![image](https://github.com/user-attachments/assets/5d2f49f2-f7b2-47ef-a40f-aa00574bf382)
@@ -65,13 +74,13 @@ Com este gráfico de dispersão em conjunto com uma linha de regressão, é poss
 - Linha de tendência: A linha ajustada captura bem a relação linear entre as variáveis, com poucos desvios significativos.
 
 
-**3.2  Coeficiente de correlação "r":**
+**4.2  Coeficiente de correlação "r":**
 
 ![image](https://github.com/user-attachments/assets/7c90116b-2c84-4363-a599-2e9504f75433)
 
 - O coeficiente de correlação se trata de o quanto a variável dependente está relacionada com a variável independente, neste caso, "Sales" e "TV", respectivamente. Como é apresentado, existe um coeficiente de correlação de **"0,90"**, o que indica que existe de fato, uma forte correlação positiva entre as variáveis.
 
-**3.3  Análises gerais:**
+**4.3  Análise exploratória das estátisticas gerais:**
 
 Ao final do bloco, a função "summary" irá apresentar uma análise detalhada de todas as informações presentes na regressão linear.
 
@@ -79,7 +88,7 @@ Ao final do bloco, a função "summary" irá apresentar uma análise detalhada d
 
 Sendo essas informações: 
 
-**3.3.1  Resíduos (Residuals):**
+**4.3.1  Resíduos (Residuals):**
 
 Os resíduos vão nos mostrar o quanto o valor observado/real divergiu do valor esperado pelo modelo de regressão linear.
 
@@ -89,7 +98,7 @@ Os resíduos vão nos mostrar o quanto o valor observado/real divergiu do valor 
 
 - Valor máximo: Foi de aproximadamente **5,70**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 5,70 menor do que o valor real.
 
-**3.3.2  Coeficientes (Coefficients):**
+**4.3.2  Coeficientes (Coefficients):**
 
 Os coeficientes representam a relação entre os gastos em anúncios de TV (TV) e as vendas (Sales).
 
@@ -107,7 +116,7 @@ Os coeficientes representam a relação entre os gastos em anúncios de TV (TV) 
 - **Estatística t / Valor t:** Como o valor **29,26** é mais elevado, a influência que a variável independente tem sobre a variável dependente é estatisticamente significativa.
 - **P-valor:** Apresenta um valor muito pequeno, **<2e-16** ou **0,0000000000000002**, confirmando que os gastos em TV têm um impacto altamente significativo sobre as vendas.
 
-**3.3.3  Níveis de significância estatística:**
+**4.3.3  Níveis de significância estatística:**
 
 ![image](https://github.com/user-attachments/assets/9fe0b697-36d8-445f-836e-db4ba4929814)
 
@@ -118,21 +127,24 @@ Os asteriscos (***) indicam níveis de significância estatística.
 - "*": (p<0,05), logo, é significativo estatisticamente.
 - Sem asterisco: Não é significativo estatisticamente.
 
-**3.3.4 Erro padrão Residual (Residual Standard Error):**
+**4.3.4 Erro padrão Residual (Residual Standard Error):**
 
 - O erro padrão residual tem a função de medir o quanto a variação média prevista das incertezas do modelo estão distantes da variação real.
 - Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **2.296 unidades**.
 
-**3.3.5 Coeficiente de determinação (R²):**
+**4.3.5 Coeficiente de determinação (R²):**
 
 - Diz sobre o quanto do comportamento da variável dependente (Sales), pode ser explicado pela variável independente (TV) no modelo de regressão.
 - Dessa forma, o R² equivalente a **0,8122**, significa que 81,22% da variação nas vendas podem ser explicadas pelos investimentos em anúncios de TV.
 
-**3.4 Conclusão obtida pelo modelo de regressão linear (Sales x TV):**
+**4.4 Conclusão obtida pelo modelo de regressão linear (Sales x TV):**
+
+Os resultados do modelo indicam que os gastos em anúncios de TV têm um impacto significativo e positivo nas vendas. A relação é bem ajustada, com o modelo explicando 81.22% da variação nas vendas (R²), o que demonstra a relevância dos anúncios de TV como fator influente no desempenho das vendas. Cada unidade adicional de investimento em TV resulta em um aumento médio de 0.055465 unidades nas vendas, comprovando a eficácia dessa estratégia.
 
 
 
-## 4. Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "Rádio".
+
+## 5. Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "Rádio".
   
   ```r
   
@@ -161,7 +173,7 @@ Os asteriscos (***) indicam níveis de significância estatística.
 Na continuação do código, iremos analisar a relação entre a variável dependente "Sales" e a variável independente "Radio"
 
 
-**4.1 Gráfico de de dispersão e linha de regressão**
+**5.1 Gráfico de de dispersão e linha de regressão**
 
 ![image](https://github.com/user-attachments/assets/b65a9b77-d8ab-4b4a-901e-5a9483748418)
 
@@ -171,19 +183,19 @@ Através deste gráfico, é possível perceber que a correlação entre as varia
 
 - Linha de têndencia: Como os pontos não estão tão próximos da linha de regressão, o modelo tem uma capacidade moderada de explicar a variação nas vendas.
 
-**4.2 Coeficiente de correlação "r":**
+**5.2 Coeficiente de correlação "r":**
 
 ![image](https://github.com/user-attachments/assets/14dfcddb-0a7c-4d59-8804-77107aa15dd3)
 
 - O coeficiente de correlação entre a variável dependente "Sales" e a variável independente "Rádio" é de **"0,35"**, que representa uma correlação de fraca a moderada.
 
-**4.3 Análise exploratória das estátisticas gerais:**
+**5.3 Análise exploratória das estátisticas gerais:**
 
 ![image](https://github.com/user-attachments/assets/1c231095-f4e0-4b61-8100-53eba8ee01a5)
 
 Assim como anteriormente, vamos fazer uma análise geral das informações obtidas por meio desta regressão linear
 
-**4.3.1  Resíduos (Residuals):**
+**5.3.1  Resíduos (Residuals):**
 
 - Valor mínimo: Foi de aproximadamente **-15,57**. Em determinado momento, o modelo esperou um valor cerca de 15,57 vezes maior do que o valor que foi calculado de fato. 
 - 1º Quartil: 25% dos erros são menores que -3.5293 unidades.
@@ -191,7 +203,7 @@ Assim como anteriormente, vamos fazer uma análise geral das informações obtid
 - 3º Quartil: 75% dos erros são menores que 4.2504 unidades.
 - Valor máximo: O valor obtido foi cerca de **8,68**, ou seja, em algum ponto do conjunto de dados, o modelo previa um valor de aproximadamente 8,68 vezes menor do que o valor real.
 
-**4.3.2  Coeficientes (Coefficients):**
+**5.3.2  Coeficientes (Coefficients):**
 
 Os coeficientes representam a relação entre os gastos em anúncios de Rádio e as vendas.
 
@@ -210,38 +222,52 @@ Os coeficientes representam a relação entre os gastos em anúncios de Rádio e
 - **P-valor:** Apresenta o valor de, **3.88e-07** ou **0,000000388** que é consideravelmente pequeno, embora seja bem maior do que o P-valor da "variável **TV**" confirmando que os gastos em Rádio têm um impacto altamente significativo sobre as vendas do determinado produto.
 
 
-**4.3.3 Erro padrão Residual (Residual Standard Error):**
+**5.3.3 Erro padrão Residual (Residual Standard Error):**
 
 - O erro padrão residual tem a função de medir o quanto a variação média prevista das incertezas do modelo estão distantes da variação real.
 - Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **4,963 unidades**, com 198 graus de liberdade.
 
-**4.3.4 Coeficiente de determinação (R²):**
+**5.3.4 Coeficiente de determinação (R²):**
 
 - Diz sobre o quanto do comportamento da variável dependente (Sales), pode ser explicado pela variável independente (Rádio) no modelo de regressão.
 - Nesta análise, o R² tem o valor de **0.1222**, isso é, 12,22% da variação nas vendas podem ser explicadas pelos investimentos em anúncios de TV.
 
-**4.4 Conclusão:**
+**5.4 Conclusão:**
+
+   O investimento em anúncios de rádio gera um impacto positivo e significativo nas vendas, mas o efeito é relativamente pequeno, já que cada unidade adicional de gasto em rádio aumenta as vendas, em média, apenas 0.1244 unidades. Ou seja, embora o modelo seja útil para identificar essa relação, ele não é suficientemente preciso para prever as vendas com alta confiabilidade.
 
 
+## 6. Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "Newspaper".
+
+```r
+
+# 3. Regressão Linear e Correlação entre a variável independente "Newspaper" e a variável dependente "Sales"
+
+              
+  # 3.1 - Criação da variável que irá calcular a regressão linear.
+              regressao_newspaper <- lm(Sales ~ Newspaper, data = dados)
+  
+  # 3.2 - Criação do gráfico de dispersão com a linha de regressão.
+              ggplot(data = dados, mapping = aes(x = Newspaper, y = Sales)) +
+              geom_point() +
+              geom_smooth(method = lm, col = "red") +
+              theme_classic() +
+              ggtitle("Anúncios em Jornais/Newspaper x Impacto em Vendas/Sales") +
+              labs(x = "Anúncios em Jornais/Newspaper", y = "Vendas/Sales")
+  
+  # 3.3 - Calcular a correlação entre as variáveis "Newspaper" e "Sales".
+              cor_newspaper <- cor(dados$Sales, dados$Newspaper)
+              print(paste("Correlação entre Anúncios em Jornais/Newspaper e Impactos em Vendas/Sales:", round(cor_newspaper, 2)))
+
+  # 3.4 - Ao final, serão apresentadas as análise de regressão e correlação.
+              summary(regressao_newspaper)
+
+```
+Nesta etapa, será realizada a análise de regressão entre a variável dependente "Sales" e a variável independente "Newspaper" 
 
 
- 
-
-
-
-
-    
-
-
-
-
- 
-
-## 5.0
+**6.1 Gráfico de de dispersão e linha de regressão**              
 ![image](https://github.com/user-attachments/assets/043cbc4b-7f0f-4966-953c-9f1e237e50b2)
-              
-              
-
 
 
 
