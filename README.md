@@ -257,7 +257,7 @@ Os coeficientes representam a relação entre os gastos em anúncios de Rádio e
   
   # 3.3 - Calcular a correlação entre as variáveis "Newspaper" e "Sales".
               cor_newspaper <- cor(dados$Sales, dados$Newspaper)
-              print(paste("Correlação entre Anúncios em Jornais/Newspaper e Impactos em Vendas/Sales:", round(cor_newspaper, 2)))
+              print(paste("Correlação entre Anúncios em Jornais/Newspaper e Impactos em Vendas/Sales:",round(cor_newspaper, 2)))
 
   # 3.4 - Ao final, serão apresentadas as análise de regressão e correlação.
               summary(regressao_newspaper)
