@@ -232,7 +232,7 @@ Os coeficientes representam a relação entre os gastos em anúncios de Rádio e
 - Diz sobre o quanto do comportamento da variável dependente (Sales), pode ser explicado pela variável independente (Rádio) no modelo de regressão.
 - Nesta análise, o R² tem o valor de **0.1222**, isso é, 12,22% da variação nas vendas podem ser explicadas pelos investimentos em anúncios de TV.
 
-**5.4 Conclusão:**
+**5.4 Conclusão obtida pelo modelo de regressão linear (Sales x Rádio)::**
 
    O investimento em anúncios de rádio gera um impacto positivo e significativo nas vendas, mas o efeito é relativamente pequeno, já que cada unidade adicional de gasto em rádio aumenta as vendas, em média, apenas 0.1244 unidades. Ou seja, embora o modelo seja útil para identificar essa relação, ele não é suficientemente preciso para prever as vendas com alta confiabilidade.
 
@@ -268,6 +268,20 @@ Nesta etapa, será realizada a análise de regressão entre a variável dependen
 
 **6.1 Gráfico de de dispersão e linha de regressão**              
 ![image](https://github.com/user-attachments/assets/043cbc4b-7f0f-4966-953c-9f1e237e50b2)
+
+Por meio desta regressão linear, é possível perceber que:
+
+- A linha de regressão apresenta uma leve inclinação positiva, indicando que, à medida que os gastos em anúncios de jornal aumentam, as vendas tendem a aumentar.
+Contudo, a inclinação é quase horizontal, sugerindo que o impacto dos anúncios em jornal nas vendas é muito pequeno.
+
+- Os pontos estão bastante dispersos em torno da linha de regressão, o que indica uma relação fraca entre as variáveis.
+
+**6.2  Coeficiente de correlação "r":**
+![image](https://github.com/user-attachments/assets/7b803273-2b0a-4155-9995-db7a987d1374)
+
+- O coeficiente de correlação entre a variável dependente "Sales" e a variável independente é de **0,16**, o que indica que o nível de correlação é extremamente baixo.
+
+
 
 
 
