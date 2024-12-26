@@ -269,10 +269,9 @@ Nesta etapa, será realizada a análise de regressão entre a variável dependen
 **6.1 Gráfico de de dispersão e linha de regressão**              
 ![image](https://github.com/user-attachments/assets/043cbc4b-7f0f-4966-953c-9f1e237e50b2)
 
-Por meio desta regressão linear, é possível perceber que:
+Por meio desta regressão linear, são perceptíveis alguns detalhes:
 
-- A linha de regressão apresenta uma leve inclinação positiva, indicando que, à medida que os gastos em anúncios de jornal aumentam, as vendas tendem a aumentar.
-Contudo, a inclinação é quase horizontal, sugerindo que o impacto dos anúncios em jornal nas vendas é muito pequeno.
+- Existe uma correlação positiva, porém fraca, entre a variável dependente "Sales" e a variável independente "Newspaper", e isso é destacado pela linha de regressão que apresenta uma leve inclinação positiva. Contudo, a inclinação é quase horizontal, sugerindo que o impacto dos anúncios em jornal nas vendas é muito pequeno.
 
 - Os pontos estão bastante dispersos em torno da linha de regressão, o que indica uma relação fraca entre as variáveis.
 
@@ -284,6 +283,34 @@ Contudo, a inclinação é quase horizontal, sugerindo que o impacto dos anúnci
 
 **6.3 Análise exploratória das estátisticas gerais:**
 
+![image](https://github.com/user-attachments/assets/01e2f33b-6aee-4a22-8ebd-b4648c3d5281)
+
+**6.3.1  Resíduos (Residuals):**
+
+- Valor mínimo: O valor obtido foi **-12,6930**, que significa que era esperado um valor cerca de 12,70 vezes maior do que o valor que foi obtido através do modelo de fato. 
+- 1º Quartil: 25% dos erros são menores que **-3,8807** unidades.
+- Resíduo mediano: É de 0,6591, o que pode indicar que o modelo está moderadamente descentralizado de forma, o que pode ser visível pela forte dispersão dos pontos.
+- 3º Quartil: 75% dos erros são menores que **3,9083** unidades.
+- Valor máximo: O valor obtido foi  **11,4385**, ou seja, o modelo previa um valor aproximadamente 11,44 vezes menor do que o valor real.
+
+
+**6.3.2  Coeficientes (Coefficients):**
+
+Os coeficientes representam a relação entre os gastos em anúncios de Rádio (Radio) e as vendas (Sales).
+
+***Intercepto***
+   
+- **Estimativa:** O valor **13,95955** representa as vendas esperadas quando não há investimento em publicidade por meio de rádios.
+- **Erro padrão:** O erro padrão do intercepto é de **0,63829**, uma incerteza bem controlada, o que indica uma maior confiança e maior precisão na estimativa do intercepto.
+- **Estatística t / Valor t:** O valor é **21,87**, e isso significa que, a estimativa do intercepto no valor de **13,95955** é **21,87** vezes maior do que o erro padrão de **0,63829** do intercepto, ou seja, evidencia uma forte precisão.
+- **Significância estatística:** O p-valor (**<2e-16** ou **0,0000000000000002**) mostra que há uma evidência muito forte de que o intercepto é diferente de zero. Isso significa que, mesmo sem gastos em anúncios de Rádio, o modelo prevê um valor base de vendas de **13,95955 unidades**, o que é estatisticamente significativo.
+
+***TV (Variável independente)***
+
+- **Estimativa:** O valor **0,055465** diz que, para cada unidade adicional de gasto em anúncios de TV, as vendas aumentam, em média, **0,055465** unidades.
+- **Erro padrão:** Como o erro padrão de **0,001896** é de fato muito pequeno, isso é um bom indicador de que as estimativas são precisas.
+- **Estatística t / Valor t:** Como o valor **29,26** é mais elevado, a influência que a variável independente tem sobre a variável dependente é estatisticamente significativa.
+- **P-valor:** Apresenta um valor muito pequeno, **<2e-16** ou **0,0000000000000002**, confirmando que os gastos em TV têm um impacto altamente significativo sobre as vendas.
 
 
 
