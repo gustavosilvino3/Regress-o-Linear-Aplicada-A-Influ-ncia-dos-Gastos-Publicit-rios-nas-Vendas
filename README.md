@@ -173,7 +173,7 @@ Os resultados do modelo indicam que os gastos em anúncios de TV têm um impacto
 Na continuação do código, iremos analisar a relação entre a variável dependente "Sales" e a variável independente "Radio"
 
 
-**5.1 Gráfico de de dispersão e linha de regressão**
+**5.1 Gráfico de dispersão e linha de regressão**
 
 ![image](https://github.com/user-attachments/assets/b65a9b77-d8ab-4b4a-901e-5a9483748418)
 
