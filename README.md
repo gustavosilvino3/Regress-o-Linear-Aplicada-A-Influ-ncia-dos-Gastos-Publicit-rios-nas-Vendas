@@ -277,9 +277,12 @@ Contudo, a inclinação é quase horizontal, sugerindo que o impacto dos anúnci
 - Os pontos estão bastante dispersos em torno da linha de regressão, o que indica uma relação fraca entre as variáveis.
 
 **6.2  Coeficiente de correlação "r":**
+
 ![image](https://github.com/user-attachments/assets/7b803273-2b0a-4155-9995-db7a987d1374)
 
 - O coeficiente de correlação entre a variável dependente "Sales" e a variável independente é de **0,16**, o que indica que o nível de correlação é extremamente baixo.
+
+**6.3 Análise exploratória das estátisticas gerais:**
 
 
 
