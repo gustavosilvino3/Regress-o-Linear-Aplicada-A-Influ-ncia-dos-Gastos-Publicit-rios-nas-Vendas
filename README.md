@@ -61,13 +61,13 @@ library(corrplot)
 Ao executar esse bloco do código, vamos obter as seguintes análises:
 
 
-**4.1   Gráfico de de dispersão e linha de regressão:**
+**4.1   Gráfico de dispersão e linha de regressão:**
 
  
  ![image](https://github.com/user-attachments/assets/5d2f49f2-f7b2-47ef-a40f-aa00574bf382)
 
 
-Com este gráfico de dispersão em conjunto com uma linha de regressão, é possível visualizar os dados de forma clara e objetiva, e é possível destacar dois tópicos: 
+Com este gráfico de dispersão em conjunto com uma linha de regressão, é possível visualizar os dados de forma clara e objetiva, e com isso, é possível destacar dois tópicos: 
 
 - Forte correlação positiva: Os dados indicam que, à medida que os gastos em TV aumentam, as vendas também tendem a aumentar. Isso é representado pela inclinação positiva da linha de regressão.
 
@@ -78,7 +78,7 @@ Com este gráfico de dispersão em conjunto com uma linha de regressão, é poss
 
 ![image](https://github.com/user-attachments/assets/7c90116b-2c84-4363-a599-2e9504f75433)
 
-- O coeficiente de correlação se trata de o quanto a variável dependente está relacionada com a variável independente, neste caso, "Sales" e "TV", respectivamente. Como é apresentado, existe um coeficiente de correlação de **"0,90"**, o que indica que existe de fato, uma forte correlação positiva entre as variáveis.
+- O coeficiente de correlação se trata de o quanto a variável dependente está relacionada com a variável independente, neste caso, "Sales" e "TV", respectivamente. Como é apresentado, existe um coeficiente de correlação de "0,90", o que indica que existe de fato, uma forte correlação positiva entre as variáveis.
 
 **4.3  Análise exploratória das estátisticas gerais:**
 
@@ -92,11 +92,11 @@ Sendo essas informações:
 
 Os resíduos vão nos mostrar o quanto o valor observado/real divergiu do valor esperado pelo modelo de regressão linear.
 
-- Valor mínimo: Foi de aproximadamente **-6,45**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 6,45 maior do que o valor real.
+- Valor mínimo: O menor valor encontrado pelo modelo foi **-6,4438**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 6,45 maior do que o valor real.
 
 - Mediana: O resíduo mediano é de 0,0218, um valor bem próximo de 0, o que indica que o modelo está bem equilibrado.
 
-- Valor máximo: Foi de aproximadamente **5,70**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 5,70 menor do que o valor real.
+- Valor máximo: O maior valor encontrado foi de **5,6932**, ou seja, em algum ponto do conjunto de dados, o modelo esperou um valor de aproximadamente 5,70 menor do que o valor real.
 
 **4.3.2  Coeficientes (Coefficients):**
 
@@ -130,7 +130,7 @@ Os asteriscos (***) indicam níveis de significância estatística.
 **4.3.4 Erro padrão Residual (Residual Standard Error):**
 
 - O erro padrão residual tem a função de medir o quanto a variação média prevista das incertezas do modelo estão distantes da variação real.
-- Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **2.296 unidades**.
+- Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **2,296 unidades**.
 
 **4.3.5 Coeficiente de determinação (R²):**
 
@@ -224,7 +224,6 @@ Os coeficientes representam a relação entre os gastos em anúncios de Rádio e
 
 **5.3.3 Erro padrão Residual (Residual Standard Error):**
 
-- O erro padrão residual tem a função de medir o quanto a variação média prevista das incertezas do modelo estão distantes da variação real.
 - Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **4,963 unidades**, com 198 graus de liberdade.
 
 **5.3.4 Coeficiente de determinação (R²):**
@@ -271,9 +270,9 @@ Nesta etapa, será realizada a análise de regressão entre a variável dependen
 
 Por meio desta regressão linear, são perceptíveis alguns detalhes:
 
-- Existe uma correlação positiva, porém fraca, entre a variável dependente "Sales" e a variável independente "Newspaper", e isso é destacado pela linha de regressão que apresenta uma leve inclinação positiva. Contudo, a inclinação é quase horizontal, sugerindo que o impacto dos anúncios em jornal nas vendas é muito pequeno.
+- Fraca correlação positiva: É destacado pela linha de regressão que apresenta uma leve inclinação positiva. Contudo, a inclinação é quase horizontal, sugerindo que o impacto dos anúncios em jornal nas vendas é muito pequeno.
 
-- Os pontos estão bastante dispersos em torno da linha de regressão, o que indica uma relação fraca entre as variáveis.
+- Dispersão descentralizada: Os pontos estão bastante dispersos em torno da linha de regressão, o que indica uma relação fraca entre as variáveis.
 
 **6.2  Coeficiente de correlação "r":**
 
@@ -309,8 +308,18 @@ Os coeficientes representam a relação entre os gastos em anúncios de jornal (
 
 - **Estimativa:** O valor **0,03832** afirma que, para cada unidade adicional de gasto em anúncios de jornal, as vendas aumentam, em média, **0,03832** unidades.
 - **Erro padrão:** Como o erro padrão de **0,01703** é de fato muito pequeno, isso é um bom indicador de que as estimativas são precisas.
-- **Estatística t / Valor t:** Como o valor **29,26** é mais elevado, a influência que a variável independente tem sobre a variável dependente é estatisticamente significativa.
-- **P-valor:** Apresenta um valor muito pequeno, **<2e-16** ou **0,0000000000000002**, confirmando que os gastos em jornal têm um impacto altamente significativo sobre as vendas.
+- **Estatística t / Valor t:** O valor obtido pelo modelo foi de **2,251**. Isso significa que o impacto da variável independente "Newspaper" no modelo é pequeno, contudo, é estatisticamente significativo. 
+- **P-valor:** Apresenta o valor **0,0255**, confirmando que os gastos em anúncios de jornal são significativos sobre as vendas, embora não seja tão impactante no resultado final.
+
+**6.3.3 Erro padrão Residual (Residual Standard Error):**
+
+- Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **5,231 unidades**, com 198 graus de liberdade.
+
+
+**6.3.4 Coeficiente de determinação (R²):**
+
+- Foi obtido um R² equivalente a **0,02495**. Isso significa que 2,50% da variação nas vendas podem ser explicadas pelos investimentos em anúncios de jornal.
+
 
 
 
