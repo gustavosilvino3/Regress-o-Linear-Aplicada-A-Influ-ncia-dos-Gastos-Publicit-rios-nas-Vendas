@@ -221,7 +221,6 @@ Os coeficientes representam a relação entre os gastos em anúncios de Rádio e
 - **Estatística t / Valor t:** Se encontra em **5.251**, por mais que em comparação com a variável anterior, seu tamanho tenha diminuído, o Valor T ainda permanece longe de zero, o que significa que a variável independente tem influência sobre a variável dependente e é estatisticamente significativa.
 - **P-valor:** Apresenta o valor de, **3.88e-07** ou **0,000000388** que é consideravelmente pequeno, embora seja bem maior do que o P-valor da "variável **TV**" confirmando que os gastos em Rádio têm um impacto altamente significativo sobre as vendas do determinado produto.
 
-
 **5.3.3 Erro padrão Residual (Residual Standard Error):**
 
 - Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **4,963 unidades**, com 198 graus de liberdade.
@@ -234,7 +233,6 @@ Os coeficientes representam a relação entre os gastos em anúncios de Rádio e
 **5.4 Conclusão obtida pelo modelo de regressão linear (Sales x Rádio):**
 
    O investimento em anúncios de rádio gera um impacto positivo e significativo nas vendas, mas o efeito é relativamente pequeno, já que cada unidade adicional de gasto em rádio faz com que as vendas aumentem, em média, apenas 0.1244 unidades. Ou seja, embora o modelo seja útil para identificar essa relação, ele não é suficientemente preciso para prever as vendas com alta confiabilidade.
-
 
 ## 6. Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "Newspaper".
 
@@ -264,7 +262,6 @@ Os coeficientes representam a relação entre os gastos em anúncios de Rádio e
 ```
 Nesta etapa, será realizada a análise de regressão entre a variável dependente "Sales" e a variável independente "Newspaper" 
 
-
 **6.1 Gráfico de de dispersão e linha de regressão**              
 ![image](https://github.com/user-attachments/assets/043cbc4b-7f0f-4966-953c-9f1e237e50b2)
 
@@ -292,7 +289,6 @@ Por meio desta regressão linear, são perceptíveis alguns detalhes:
 - 3º Quartil: 75% dos erros são menores que **3,9083** unidades.
 - Valor máximo: O valor obtido foi  **11,4385**, ou seja, o modelo previa um valor aproximadamente 11,44 vezes menor do que o valor real.
 
-
 **6.3.2  Coeficientes (Coefficients):**
 
 Os coeficientes representam a relação entre os gastos em anúncios de jornal (Newspaper) e as vendas (Sales).
@@ -314,7 +310,6 @@ Os coeficientes representam a relação entre os gastos em anúncios de jornal (
 **6.3.3 Erro padrão Residual (Residual Standard Error):**
 
 - Neste caso, o erro médio do modelo ao prever vendas é de aproximadamente **5,231 unidades**, com 198 graus de liberdade.
-
 
 **6.3.4 Coeficiente de determinação (R²):**
 
