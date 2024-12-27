@@ -279,7 +279,7 @@ Por meio desta regressão linear, são perceptíveis alguns detalhes:
 
 ![image](https://github.com/user-attachments/assets/7b803273-2b0a-4155-9995-db7a987d1374)
 
-- O coeficiente de correlação entre a variável dependente "Sales" e a variável independente é de **0,16**, o que indica que o nível de correlação é extremamente baixo.
+- O coeficiente de correlação entre a variável dependente "Sales" e a variável independente "Newspaper" é de **0,16**, o que indica que o nível de correlação é extremamente baixo.
 
 **6.3 Análise exploratória das estátisticas gerais:**
 
@@ -296,21 +296,21 @@ Por meio desta regressão linear, são perceptíveis alguns detalhes:
 
 **6.3.2  Coeficientes (Coefficients):**
 
-Os coeficientes representam a relação entre os gastos em anúncios de Rádio (Radio) e as vendas (Sales).
+Os coeficientes representam a relação entre os gastos em anúncios de jornal (Newspaper) e as vendas (Sales).
 
 ***Intercepto***
    
-- **Estimativa:** O valor **13,95955** representa as vendas esperadas quando não há investimento em publicidade por meio de rádios.
+- **Estimativa:** O valor **13,95955** representa as vendas esperadas quando não há investimento em publicidade por meio de jornais.
 - **Erro padrão:** O erro padrão do intercepto é de **0,63829**, uma incerteza bem controlada, o que indica uma maior confiança e maior precisão na estimativa do intercepto.
 - **Estatística t / Valor t:** O valor é **21,87**, e isso significa que, a estimativa do intercepto no valor de **13,95955** é **21,87** vezes maior do que o erro padrão de **0,63829** do intercepto, ou seja, evidencia uma forte precisão.
-- **Significância estatística:** O p-valor (**<2e-16** ou **0,0000000000000002**) mostra que há uma evidência muito forte de que o intercepto é diferente de zero. Isso significa que, mesmo sem gastos em anúncios de Rádio, o modelo prevê um valor base de vendas de **13,95955 unidades**, o que é estatisticamente significativo.
+- **Significância estatística:** O p-valor (**<2e-16** ou **0,0000000000000002**) mostra que há uma evidência muito forte de que o intercepto é diferente de zero. Isso significa que, mesmo sem gastos em anúncios de jornal, o modelo prevê um valor base de vendas de **13,95955 unidades**, o que é estatisticamente significativo.
 
-***TV (Variável independente)***
+***Jornal (Variável independente)***
 
-- **Estimativa:** O valor **0,03832** afirma que, para cada unidade adicional de gasto em anúncios de Rádio, as vendas aumentam, em média, **0,03832** unidades.
+- **Estimativa:** O valor **0,03832** afirma que, para cada unidade adicional de gasto em anúncios de jornal, as vendas aumentam, em média, **0,03832** unidades.
 - **Erro padrão:** Como o erro padrão de **0,01703** é de fato muito pequeno, isso é um bom indicador de que as estimativas são precisas.
 - **Estatística t / Valor t:** Como o valor **29,26** é mais elevado, a influência que a variável independente tem sobre a variável dependente é estatisticamente significativa.
-- **P-valor:** Apresenta um valor muito pequeno, **<2e-16** ou **0,0000000000000002**, confirmando que os gastos em TV têm um impacto altamente significativo sobre as vendas.
+- **P-valor:** Apresenta um valor muito pequeno, **<2e-16** ou **0,0000000000000002**, confirmando que os gastos em jornal têm um impacto altamente significativo sobre as vendas.
 
 
 
