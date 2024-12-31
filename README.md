@@ -139,7 +139,7 @@ Os asteriscos (***) indicam níveis de significância estatística.
 
 **4.4 Conclusão obtida pelo modelo de regressão linear "Sales x TV":**
 
-      Os resultados do modelo indicam que os gastos em anúncios de TV têm um impacto significativo e positivo nas vendas. A relação é bem ajustada, com o modelo explicando 81.22% da variação nas vendas (R²), o que demonstra a relevância dos anúncios de TV como fator influente no desempenho das vendas. Cada unidade adicional de investimento em TV resulta em um aumento médio de 0.055465 unidades nas vendas, comprovando a eficácia dessa estratégia.
+&nbsp;&nbsp;&nbsp;Os resultados do modelo indicam que os gastos em anúncios de TV têm um impacto significativo e positivo nas vendas. A relação é bem ajustada, com o modelo explicando 81.22% da variação nas vendas (R²), o que demonstra a relevância dos anúncios de TV como fator influente no desempenho das vendas. Cada unidade adicional de investimento em TV resulta em um aumento médio de 0.055465 unidades nas vendas, comprovando a eficácia dessa estratégia.
 
 
 
@@ -232,7 +232,7 @@ Os coeficientes representam a relação entre os gastos em anúncios de Rádio e
 
 **5.4 Conclusão obtida pelo modelo de regressão linear (Sales x Rádio):**
 
-      O investimento em anúncios de rádio gera um impacto positivo e significativo nas vendas, mas o efeito é relativamente pequeno, já que cada unidade adicional de gasto em rádio faz com que as vendas aumentem, em média, apenas 0.1244 unidades. Ou seja, embora o modelo seja útil para identificar essa relação, ele não é suficientemente preciso para prever as vendas com alta confiabilidade.
+&nbsp;&nbsp;&nbsp;O investimento em anúncios de rádio gera um impacto positivo e significativo nas vendas, mas o efeito é relativamente pequeno, já que cada unidade adicional de gasto em rádio faz com que as vendas aumentem, em média, apenas 0.1244 unidades. Ou seja, embora o modelo seja útil para identificar essa relação, ele não é suficientemente preciso para prever as vendas com alta confiabilidade.
 
 ## 6. Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "Newspaper".
 
