@@ -13,6 +13,9 @@ Explorar a aplicação da regressão linear para analisar como o investimento em
 - Base de dados utilizada disponível em: https://www.kaggle.com/datasets/ashydv/advertising-dataset/data
 - Código desenvolvido por meio de linguagem R.
 - IDE utilizada: RStudio.
+- Livro de referência: JAMES, Gareth; WITTEN, Daniela; HASTIE, Trevor; TIBSHIRANI, Robert. An Introduction to Statistical Learning: With Applications in R. New York: Springer, 2013.
+
+
 
 ## 3. Desenvolvimento por partes do código: Importar bibliotecas
 
