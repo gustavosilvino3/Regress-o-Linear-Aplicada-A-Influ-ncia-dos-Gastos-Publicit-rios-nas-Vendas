@@ -139,7 +139,7 @@ Os asteriscos (***) indicam níveis de significância estatística.
 
 **4.4 Conclusão obtida pelo modelo de regressão linear "Sales x TV":**
 
-Os resultados do modelo indicam que os gastos em anúncios de TV têm um impacto significativo e positivo nas vendas. A relação é bem ajustada, com o modelo explicando 81.22% da variação nas vendas (R²), o que demonstra a relevância dos anúncios de TV como fator influente no desempenho das vendas. Cada unidade adicional de investimento em TV resulta em um aumento médio de 0.055465 unidades nas vendas, comprovando a eficácia dessa estratégia.
+      Os resultados do modelo indicam que os gastos em anúncios de TV têm um impacto significativo e positivo nas vendas. A relação é bem ajustada, com o modelo explicando 81.22% da variação nas vendas (R²), o que demonstra a relevância dos anúncios de TV como fator influente no desempenho das vendas. Cada unidade adicional de investimento em TV resulta em um aumento médio de 0.055465 unidades nas vendas, comprovando a eficácia dessa estratégia.
 
 
 
@@ -232,7 +232,7 @@ Os coeficientes representam a relação entre os gastos em anúncios de Rádio e
 
 **5.4 Conclusão obtida pelo modelo de regressão linear (Sales x Rádio):**
 
-   O investimento em anúncios de rádio gera um impacto positivo e significativo nas vendas, mas o efeito é relativamente pequeno, já que cada unidade adicional de gasto em rádio faz com que as vendas aumentem, em média, apenas 0.1244 unidades. Ou seja, embora o modelo seja útil para identificar essa relação, ele não é suficientemente preciso para prever as vendas com alta confiabilidade.
+      O investimento em anúncios de rádio gera um impacto positivo e significativo nas vendas, mas o efeito é relativamente pequeno, já que cada unidade adicional de gasto em rádio faz com que as vendas aumentem, em média, apenas 0.1244 unidades. Ou seja, embora o modelo seja útil para identificar essa relação, ele não é suficientemente preciso para prever as vendas com alta confiabilidade.
 
 ## 6. Desenvolvimento por partes do código: Variável dependente "Sales" x Variável independente "Newspaper".
 
@@ -317,12 +317,12 @@ Os coeficientes representam a relação entre os gastos em anúncios de jornal (
 
 **6.4  Conclusão obtida pelo modelo de regressão linear "Sales x Newspaper":**
 
- Embora exista uma relação entre o investimento nas propagandas de jornal e o aumento de vendas, o impacto desta variável é praticamente irrelevante quando é analisada de forma isolada, assim como foi feito. A cada unidade adicional de gasto em anúncios de jornal, faz com que ocorra um aumento nas vendas de em média, 0,03832 unidades. Ou seja, embora o modelo seja útil para identificar essa relação, ele não é suficientemente preciso para prever as vendas com alta confiabilidade.
+       Embora exista uma relação entre o investimento nas propagandas de jornal e o aumento de vendas, o impacto desta variável é praticamente irrelevante quando é analisada de forma isolada, assim como foi feito. A cada unidade adicional de gasto em anúncios de jornal, faz com que ocorra um aumento nas vendas de em média, 0,03832 unidades. Ou seja, embora o modelo seja útil para identificar essa relação, ele não é suficientemente preciso para prever as vendas com alta confiabilidade.
 
  ## 7. Conclusão final: 
 
-   A análise realizada neste projeto avaliou o impacto dos gastos publicitários em TV, rádio e jornais sobre as vendas, utilizando modelos de regressão linear. Os resultados mostram que a variável "TV" teve o maior impacto, com um coeficiente positivo significativo (0,055) e explicando 81.22% da variação nas vendas (R²), o que indica uma forte relação entre os investimentos em anúncios de TV e o aumento das vendas. A variável "radio" também apresentou uma relação positiva (0,124), mas com menor poder explicativo (R²=12,22%), sugerindo que, embora significativa, sua influência seja mais limitada. Por outro lado, os anúncios em "jornais/newspaper" tiveram o menor impacto (0,038) e explicaram apenas 2,5% da variação nas vendas, indicando uma relação fraca e pouco relevante. 
-   Embora todas as variáveis sejam estatisticamente significativas, a análise evidencia que o impacto prático varia substancialmente entre as mídias, sendo os anúncios em TV os mais eficazes para impulsionar as vendas, seguidos por rádio, enquanto os anúncios em jornais mostram-se menos relevantes no contexto analisado. Esses resultados reforçam a importância de alocar recursos estrategicamente nas mídias que oferecem maior retorno.
+      A análise realizada neste projeto avaliou o impacto dos gastos publicitários em TV, rádio e jornais sobre as vendas, utilizando modelos de regressão linear. Os resultados mostram que a variável "TV" teve o maior impacto, com um coeficiente positivo significativo (0,055) e explicando 81.22% da variação nas vendas (R²), o que indica uma forte relação entre os investimentos em anúncios de TV e o aumento das vendas. A variável "radio" também apresentou uma relação positiva (0,124), mas com menor poder explicativo (R²=12,22%), sugerindo que, embora significativa, sua influência seja mais limitada. Por outro lado, os anúncios em "jornais/newspaper" tiveram o menor impacto (0,038) e explicaram apenas 2,5% da variação nas vendas, indicando uma relação fraca e pouco relevante. 
+      Embora todas as variáveis sejam estatisticamente significativas, a análise evidencia que o impacto prático varia substancialmente entre as mídias, sendo os anúncios em TV os mais eficazes para impulsionar as vendas, seguidos por rádio, enquanto os anúncios em jornais mostram-se menos relevantes no contexto analisado. Esses resultados reforçam a importância de alocar recursos estrategicamente nas mídias que oferecem maior retorno.
  
 
 
