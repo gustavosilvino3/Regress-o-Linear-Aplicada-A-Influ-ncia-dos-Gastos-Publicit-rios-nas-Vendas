@@ -21,7 +21,8 @@ Explorar a aplicação da regressão linear para analisar como o investimento em
 
 ```r
 #O arquivo "advertising.csv" é carregado para a variável "dados", contendo informações sobre os 
-#gastos com anúncios em diferentes meios de comunicação (TV, Radio, e Jornais/Newspaper), e informações acerca das vendas (Sales).
+#gastos com anúncios em diferentes meios de comunicação (TV, Radio, e Jornais/Newspaper),
+#e informações acerca das vendas (Sales).
 
 dados <- read.csv("advertising.csv")
 
