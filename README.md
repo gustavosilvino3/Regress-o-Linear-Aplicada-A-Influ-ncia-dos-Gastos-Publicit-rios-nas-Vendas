@@ -264,7 +264,7 @@ Os coeficientes representam a relação entre o investimento em anúncios de Rá
               summary(regressao_newspaper)
 
 ```
-Nesta etapa, será realizada a análise de regressão entre a variável dependente "Sales" e a variável independente "Newspaper" 
+Nesta etapa, será realizada a análise de regressão entre a variável dependente "Sales" e a variável independente "Newspaper". 
 
 **6.1 Gráfico de de dispersão e linha de regressão**              
 ![image](https://github.com/user-attachments/assets/043cbc4b-7f0f-4966-953c-9f1e237e50b2)
